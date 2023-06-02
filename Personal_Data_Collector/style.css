@@ -43,7 +43,7 @@ body {
     background-color: white;
     padding: 2rem 5rem;
     border-radius: 1rem;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -79,6 +79,7 @@ body {
     border-radius: .5rem;
     margin-top: 1rem;
     color: rgb(82, 82, 82);
+    display: none;
 }
 
 .submit {
