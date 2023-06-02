@@ -133,6 +133,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .generate-btn {
@@ -145,9 +146,17 @@ body {
     border-radius: 1rem;
     top: 0;
     right: 0;
-    transform: translate(-50%, -50%);
+    transform: translate(50%, -50%);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     cursor: pointer;
+}
+
+.generate-btn:hover {
+    background-color: #35cd79;
+}
+
+.generate-btn:active {
+    background-color: #119e51;
 }
 
 .about {
