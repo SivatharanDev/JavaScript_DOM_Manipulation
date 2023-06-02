@@ -23,12 +23,12 @@ const questions = ['What is your first name?', 'What is your last name?', 'What 
 let iteration = 0;
 
 // document.querySelector('.question').textContent = questions[0];
-let btnText = document.querySelector('.submit').textContent;
+
 
 document.querySelector('.submit').addEventListener('click', function () {
     // debugger;
     let inputValue = document.querySelector('.answer').value;
-    if (inputValue === '' && btnText === 'Submit') {
+    if (inputValue === '' && document.querySelector('.submit').textContent === 'Submit') {
         alert("Invalid Input");
 
     } else {
@@ -39,10 +39,11 @@ document.querySelector('.submit').addEventListener('click', function () {
             document.querySelector('.answer').value = "";
             ++iteration;
 
-        } else if (iteration == 6) {
+        } else if (iteration === questions.length) {
             document.querySelector('.question').textContent = 'Congratulations 🎉 !, All Questions are answered. if you want to see your details click on Generate button or click on Refresh button so You can restart answering questions.. thank you 😀.';
 
-            document.getElementsByClassName('.answer').style.display = 'none';
+            document.querySelector('.answer').style.display = 'none';
+            document.querySelector('.submit').style.display = 'none';
 
         }
     }
