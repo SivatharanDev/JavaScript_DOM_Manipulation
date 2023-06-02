@@ -37,12 +37,13 @@ body {
 }
 
 .card {
+    min-width: 75%;
     display: block;
     position: absolute;
     background-color: white;
     padding: 2rem 5rem;
     border-radius: 1rem;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -60,4 +61,91 @@ body {
     left: 0;
     transform: translate(-50%, -50%);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.question {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: rgb(62, 62, 62);
+}
+
+.answer {
+    min-width: 100%;
+    padding: 1rem 1.9rem;
+    font-size: 1.6rem;
+    outline: none;
+    border: .1rem solid #e2dede;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    color: rgb(82, 82, 82);
+}
+
+.submit {
+    margin-top: 1.75rem;
+    padding: 1.5rem 2rem;
+    /* background-image: linear-gradient(to left bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+    background-color: #ff7700;
+    border: .1rem solid white;
+    font-size: 1.6rem;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #f88928;
+}
+
+.submit:active {
+    background-color: #bf5c06;
+}
+
+.refresh {
+    margin-top: 1.75rem;
+    padding: 1.5rem 2rem;
+    /* background-image: linear-gradient(to left bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+    background-color: #0099ff;
+    border: .1rem solid white;
+    font-size: 1.6rem;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.refresh:hover {
+    background-color: #56b6f7;
+}
+
+.refresh:active {
+    background-color: #0c66a2;
+}
+
+
+.card_about {
+    min-width: 75%;
+    display: block;
+    position: absolute;
+    background-color: white;
+    padding: 2rem 5rem;
+    border-radius: 1rem;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.generate-btn {
+    display: block;
+    position: absolute;
+    /* z-index: 100; */
+    padding: 1.5rem 2rem;
+    background-color: #29b467;
+    color: white;
+    border-radius: 1rem;
+    top: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
