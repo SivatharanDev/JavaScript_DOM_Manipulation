@@ -128,12 +128,12 @@ const refreshBtn = document.querySelector('.refresh');
 const headDesc = document.querySelector('.symbol');
 const question = document.querySelector('.question');
 const answer = document.querySelector('.answer');
+const about = document.querySelector('.about');
 
 
 let iterationValue = -1;
 
 //button clicks..
-//1.Start Answering..
 let calcAgeWithBirthYear = function () {
     personn.birthYear = answer.value;
     personn.calcAge();
@@ -158,14 +158,19 @@ let addAnswer = function (ques) {
 
     }
 }
+
+//Start Answering or Submit button actions
 submitBtn.addEventListener('click', function () {
+    //Start Answering..
     if (iterationValue === -1) {
         iterationValue++;
         headDesc.textContent = `Question ${iterationValue + 1}`;
         question.textContent = questionss[iterationValue];
         submitBtn.textContent = 'Submit';
         answer.classList.remove("hide");
-    } else if (iterationValue >= 0) {
+    }
+    //Submit
+    else if (iterationValue >= 0) {
         if (!answer.classList.contains('hide') && answer.value === "") {
             alert("Answers Cannot be empty!");
         } else {
@@ -175,8 +180,10 @@ submitBtn.addEventListener('click', function () {
                 question.textContent = questionss[iterationValue];
                 addAnswer(`Question ${iterationValue}`);
                 console.log(iterationValue);
+                answer.value = "";
 
             } else {
+                if (iterationValue == questionss.length) addAnswer(`Question ${iterationValue}`);
                 headDesc.textContent = `Congratulations 🎉 !'`;
                 question.textContent = 'All Questions are answered. if you want to see your details click on Generate button or click on Refresh button so You can restart answering questions.. thank you 😀.';
                 answer.classList.add("hide");
@@ -188,13 +195,11 @@ submitBtn.addEventListener('click', function () {
 
     }
 });
-
+//Generate
 generateBtn.addEventListener('click', function () {
     console.log(personn);
+    about.textContent = `Hello 👋🏻 ${personn.fistName} ${personn.lastName} 😀, You born in ${personn.birthYear}👶🏽, now your age is ${personn.age}, You working as ${personn.job}🎉, you interested in ${personn.hobby}... 😀`;
+
 });
 
 
-
-//2.Refresh..
-//3.Submit..
-//4.Generate
