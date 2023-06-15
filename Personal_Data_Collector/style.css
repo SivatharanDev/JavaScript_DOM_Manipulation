@@ -27,7 +27,7 @@ body {
     font-size: 3rem;
     font-weight: 500;
     text-transform: uppercase;
-    color: white;
+    color: rgb(255, 255, 255);
     display: block;
     position: absolute;
     top: 5%;
@@ -53,7 +53,7 @@ body {
     display: block;
     position: absolute;
     /* z-index: 100; */
-    padding: .5rem 1rem;
+    padding: .5rem 1.5rem;
     background-color: #ff0066;
     color: white;
     border-radius: 1rem;
@@ -79,7 +79,6 @@ body {
     border-radius: .5rem;
     margin-top: 1rem;
     color: rgb(82, 82, 82);
-    display: none;
 }
 
 .submit {
@@ -100,6 +99,26 @@ body {
 
 .submit:active {
     background-color: #bf5c06;
+}
+
+.gen {
+    margin-top: 1.75rem;
+    padding: 1.5rem 2rem;
+    /* background-image: linear-gradient(to left bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+    background-color: #0aa149;
+    border: .1rem solid white;
+    font-size: 1.6rem;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.gen:hover {
+    background-color: #25b762;
+}
+
+.gen:active {
+    background-color: #108d44;
 }
 
 .refresh {
@@ -142,9 +161,9 @@ body {
     position: absolute;
     /* z-index: 100; */
     padding: 1.5rem 2rem;
-    background-color: #29b467;
+    background-color: #ff0066;
     color: white;
-    border-radius: 1rem;
+    border-radius: 10rem;
     top: 0;
     right: 0;
     transform: translate(50%, -50%);
@@ -152,15 +171,20 @@ body {
     cursor: pointer;
 }
 
+/* 
 .generate-btn:hover {
     background-color: #35cd79;
 }
 
 .generate-btn:active {
     background-color: #119e51;
-}
+} */
 
 .about {
     color: white;
     letter-spacing: .1rem;
+}
+
+.hide {
+    display: none;
 }
