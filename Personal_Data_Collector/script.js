@@ -130,33 +130,70 @@ const question = document.querySelector('.question');
 const answer = document.querySelector('.answer');
 
 
-let iterationValue = 0;
+let iterationValue = -1;
 
 //button clicks..
 //1.Start Answering..
+let calcAgeWithBirthYear = function () {
+    personn.birthYear = answer.value;
+    personn.calcAge();
+}
+let addAnswer = function (ques) {
+    switch (ques) {
+        case 'Question 1':
+            personn.fistName = answer.value;
+            break;
+        case 'Question 2':
+            personn.lastName = answer.value;
+            break;
+        case 'Question 3':
+            calcAgeWithBirthYear();
+            break;
+        case 'Question 4':
+            personn.job = answer.value;
+            break;
+        case 'Question 5':
+            personn.hobby = answer.value;
+            break;
+
+    }
+}
 submitBtn.addEventListener('click', function () {
-    if (iterationValue === 0) {
+    if (iterationValue === -1) {
+        iterationValue++;
         headDesc.textContent = `Question ${iterationValue + 1}`;
         question.textContent = questionss[iterationValue];
         submitBtn.textContent = 'Submit';
         answer.classList.remove("hide");
-        iterationValue++;
-    } else if (iterationValue > 0) {
-        if (iterationValue < questionss.length) {
-            headDesc.textContent = `Question ${iterationValue + 1}`;
-            question.textContent = questionss[iterationValue];
-            iterationValue++;
+    } else if (iterationValue >= 0) {
+        if (!answer.classList.contains('hide') && answer.value === "") {
+            alert("Answers Cannot be empty!");
         } else {
-            headDesc.textContent = `Congratulations 🎉 !'`;
-            question.textContent = 'All Questions are answered. if you want to see your details click on Generate button or click on Refresh button so You can restart answering questions.. thank you 😀.';
-            answer.classList.add("hide");
-            submitBtn.classList.add("hide");
-            generateBtn.classList.remove("hide");
-            headDesc.style.backgroundColor = 'rgb(2, 151, 82)';
+            iterationValue++;
+            if (iterationValue < questionss.length) {
+                headDesc.textContent = `Question ${iterationValue + 1}`;
+                question.textContent = questionss[iterationValue];
+                addAnswer(`Question ${iterationValue}`);
+                console.log(iterationValue);
+
+            } else {
+                headDesc.textContent = `Congratulations 🎉 !'`;
+                question.textContent = 'All Questions are answered. if you want to see your details click on Generate button or click on Refresh button so You can restart answering questions.. thank you 😀.';
+                answer.classList.add("hide");
+                submitBtn.classList.add("hide");
+                generateBtn.classList.remove("hide");
+                headDesc.style.backgroundColor = 'rgb(2, 151, 82)';
+            }
         }
 
     }
 });
+
+generateBtn.addEventListener('click', function () {
+    console.log(personn);
+});
+
+
 
 //2.Refresh..
 //3.Submit..
