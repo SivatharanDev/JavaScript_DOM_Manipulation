@@ -77,7 +77,6 @@ submitBtn.addEventListener('click', function () {
                 headDesc.textContent = `Question ${iterationValue + 1}`;
                 question.textContent = questionss[iterationValue];
                 addAnswer(`Question ${iterationValue}`);
-                console.log(iterationValue);
                 answer.value = "";
 
             } else {
@@ -95,7 +94,6 @@ submitBtn.addEventListener('click', function () {
 });
 //Generate
 generateBtn.addEventListener('click', function () {
-    console.log(personn);
     about.textContent = `Hello 👋🏻 ${personn.fistName} ${personn.lastName} 😀, You born in ${personn.birthYear}👶🏽, now your age is ${personn.age}, You working as ${personn.job}🎉, you interested in ${personn.hobby}... 😀`;
 
 });
