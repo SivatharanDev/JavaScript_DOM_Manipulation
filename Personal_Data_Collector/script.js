@@ -202,4 +202,23 @@ generateBtn.addEventListener('click', function () {
 
 });
 
+//Refresh..
+refreshBtn.addEventListener('click', function () {
+    headDesc.textContent = `Description 👇🏻`;
+    question.textContent = `Welcome 😀! This is a program that ask you several quetions about you 🫵🏻 and based on that it will generate information about you 🙌🏻. shall we begin 🚀 ?`;
+    answer.classList.add("hide");
+    submitBtn.classList.remove("hide");
+    submitBtn.textContent = 'Start answering 🤞🏼';
+    generateBtn.classList.add("hide");
+    headDesc.style.backgroundColor = '#ff0066';
+    iterationValue = -1;
+    personn.fistName = "";
+    personn.lastName = "";
+    personn.birthYear = 0;
+    personn.job = "";
+    personn.hobby = "";
+    about.textContent = "Please Click on Generate button for generate informations about You ☝🏻";
+    answer.value = "";
+});
+
 
