@@ -15,12 +15,16 @@ const personn = {
     hobby: ''
 }
 const personCard = function () {
+    //cards tag
     let cards = document.createElement('div');
-    let headingText = document.createTextNode('Hello, World!');
     cards.setAttribute('class', 'cards');
+    // let headingText = document.createTextNode('Hello, World!');
+    //img div tag
+
+
     let card_about = document.querySelector('.card_about');
     card_about.appendChild(cards);
-    cards.appendChild(headingText);
+    // cards.appendChild(headingText);
 }
 //Array that is used to store all the quetions..
 const questionss = ['What is your first name?', 'What is your last name?', 'What is your birth year?', 'What is your current position?', 'What is your current hobby?'];
@@ -67,6 +71,7 @@ let addAnswer = function (ques) {
 
 //Start Answering or Submit button actions
 submitBtn.addEventListener('click', function () {
+    personCard();
     //Start Answering..
     if (iterationValue === -1) {
         iterationValue++;
@@ -74,6 +79,7 @@ submitBtn.addEventListener('click', function () {
         question.textContent = questionss[iterationValue];
         submitBtn.textContent = 'Submit';
         answer.classList.remove("hide");
+
     }
     //Submit
     else if (iterationValue >= 0) {
