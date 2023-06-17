@@ -14,6 +14,14 @@ const personn = {
     job: '',
     hobby: ''
 }
+const personCard = function () {
+    let cards = document.createElement('div');
+    let headingText = document.createTextNode('Hello, World!');
+    cards.setAttribute('class', 'cards');
+    let card_about = document.querySelector('.card_about');
+    card_about.appendChild(cards);
+    cards.appendChild(headingText);
+}
 //Array that is used to store all the quetions..
 const questionss = ['What is your first name?', 'What is your last name?', 'What is your birth year?', 'What is your current position?', 'What is your current hobby?'];
 
@@ -94,7 +102,8 @@ submitBtn.addEventListener('click', function () {
 });
 //Generate
 generateBtn.addEventListener('click', function () {
-    about.textContent = `Hello 👋🏻 ${personn.fistName} ${personn.lastName} 😀, You born in ${personn.birthYear}👶🏽, now your age is ${personn.age}, You working as ${personn.job}🎉, you interested in ${personn.hobby}... 😀`;
+    // about.textContent = `Hello 👋🏻 ${personn.fistName} ${personn.lastName} 😀, You born in ${personn.birthYear}👶🏽, now your age is ${personn.age}, You working as ${personn.job}🎉, you interested in ${personn.hobby}... 😀`;
+    personCard();
 
 });
 
