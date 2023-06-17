@@ -19,12 +19,88 @@ const personCard = function () {
     let cards = document.createElement('div');
     cards.setAttribute('class', 'cards');
     // let headingText = document.createTextNode('Hello, World!');
-    //img div tag
-
-
     let card_about = document.querySelector('.card_about');
     card_about.appendChild(cards);
     // cards.appendChild(headingText);
+
+    let imgDiv = document.createElement('div');
+    let img = document.createElement('img');
+    imgDiv.setAttribute('class', 'img');
+    img.setAttribute('class', 'img-item');
+    img.setAttribute('alt', 'user');
+    img.setAttribute('src', 'Images/user.jpg');
+    cards.appendChild(imgDiv);
+    imgDiv.appendChild(img);
+
+    let details = document.createElement('div');
+    details.setAttribute('class', 'details');
+    cards.appendChild(details);
+
+    //first-name
+    let flabel = document.createElement('p');
+    let fTxt = document.createTextNode("First Name : ");
+    flabel.appendChild(fTxt);
+    let f_name = document.createElement('span');
+    let f_val = document.createTextNode("Sivatharan");
+    f_name.setAttribute('class', 'f-name');
+    flabel.appendChild(f_name);
+    f_name.appendChild(f_val);
+    details.appendChild(flabel);
+
+    //last-name
+    let llabel = document.createElement('p');
+    let lTxt = document.createTextNode("Last Name : ");
+    llabel.appendChild(lTxt);
+    let l_name = document.createElement('span');
+    let l_val = document.createTextNode("Ponsivaranjan");
+    l_name.setAttribute('class', 'l-name');
+    llabel.appendChild(l_name);
+    l_name.appendChild(l_val);
+    details.appendChild(llabel);
+
+    //DOB
+    let dobLabel = document.createElement('p');
+    let dobTxt = document.createTextNode("DOB : ");
+    dobLabel.appendChild(dobTxt);
+    let dob_name = document.createElement('span');
+    let dob_val = document.createTextNode("1997");
+    dob_name.setAttribute('class', 'dob-name');
+    dobLabel.appendChild(dob_name);
+    dob_name.appendChild(dob_val);
+    details.appendChild(dobLabel);
+
+    //Age
+    let ageLabel = document.createElement('p');
+    let ageTxt = document.createTextNode("Age Now : ");
+    ageLabel.appendChild(ageTxt);
+    let age_name = document.createElement('span');
+    let age_val = document.createTextNode("26");
+    age_name.setAttribute('class', 'age-name');
+    ageLabel.appendChild(age_name);
+    age_name.appendChild(age_val);
+    details.appendChild(ageLabel);
+
+    //job
+    let jobLabel = document.createElement('p');
+    let jobTxt = document.createTextNode("Working as : ");
+    jobLabel.appendChild(jobTxt);
+    let job_name = document.createElement('span');
+    let job_val = document.createTextNode("Software Developer");
+    job_name.setAttribute('class', 'job-name');
+    jobLabel.appendChild(job_name);
+    job_name.appendChild(job_val);
+    details.appendChild(jobLabel);
+
+    //job
+    let hobbyLabel = document.createElement('p');
+    let hobbyTxt = document.createTextNode("Hobby : ");
+    hobbyLabel.appendChild(hobbyTxt);
+    let hobby_name = document.createElement('span');
+    let hobby_val = document.createTextNode("Sivatharan");
+    hobby_name.setAttribute('class', 'hobby-name');
+    hobbyLabel.appendChild(hobby_name);
+    hobby_name.appendChild(hobby_val);
+    details.appendChild(hobbyLabel);
 }
 //Array that is used to store all the quetions..
 const questionss = ['What is your first name?', 'What is your last name?', 'What is your birth year?', 'What is your current position?', 'What is your current hobby?'];
